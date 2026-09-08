@@ -72,10 +72,6 @@ backend API + docs, `15672` RabbitMQ management UI).
 
 ## 3. Advanced Features Implemented
 
-This assignment asks for **two** advanced features (10 marks); this project
-implements **four**, all cleanly separated so each can be evaluated on its
-own:
-
 1. **Redis caching for product listings** — `backend/app/cache.py`. The
    `GET /products` endpoint reads/writes a JSON blob under the key
    `products:all` with a configurable TTL (`PRODUCT_CACHE_TTL_SECONDS`). A
