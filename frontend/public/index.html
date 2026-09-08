@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Bakery Management System</title>
+<link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <header>
+    <h1>🥐 The Docker Bakery</h1>
+    <p class="subtitle">A containerized bakery management system</p>
+  </header>
+
+  <main>
+    <section id="products-section">
+      <h2>Products</h2>
+      <div id="products-status" class="status"></div>
+      <div id="products-grid" class="grid"></div>
+    </section>
+
+    <section id="order-section">
+      <h2>Place an Order</h2>
+      <form id="order-form">
+        <label>
+          Customer name
+          <input type="text" id="customer-name" required placeholder="Jane Doe" />
+        </label>
+        <div id="cart-lines"></div>
+        <button type="button" id="add-line-btn">+ Add product</button>
+        <button type="submit">Place Order</button>
+      </form>
+      <div id="order-result" class="status"></div>
+    </section>
+
+    <section id="status-section">
+      <h2>Check Order Status</h2>
+      <form id="status-form">
+        <label>
+          Order ID
+          <input type="number" id="order-id-input" min="1" required placeholder="e.g. 1" />
+        </label>
+        <button type="submit">Check Status</button>
+      </form>
+      <div id="status-result" class="status"></div>
+    </section>
+  </main>
+
+  <footer>
+    <a href="/api/health" target="_blank">API health</a>
+  </footer>
+
+  <script src="/app.js"></script>
+</body>
+</html>
